@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+}
+
+#head {
+  background-color: lightblue;
+  width: 100%;
+  color:white;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: flex;
+}
+
+#motto {
+  float: left;
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-left: 1rem;
+  font-family: Snell Roundhand, cursive;
+}
+
+#phrase{
+  text-align: center;
+  justify-content: center;
+  width: 33.3333%;
+  font-size: 2rem;
+  margin: 0 auto;
+  font-family: Snell Roundhand, cursiv
+  e;
+}
+
+/* The navbar */
+
+#menu {
+  background-color: lightblue;
+  color: white !important;
+  width: 100%;
+  box-shadow: 0 4px 4px -2px gray;
+  z-index: 1;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-link:hover {
+  color: black !important;
+}
+
+.fill {
+  width: 100%;
+  height: 4em;
+}
+
+/* For scaling the contents of the navbar depending on device */
+
+@media only screen and (min-width: 800px) {
+  #menu {
+    background-color: lightblue;
+    color: white !important;
+    width: 100%;
+    box-shadow: 0 4px 4px -2px gray;
+  }
+
+  .navbar.center .navbar-inner .nav {
+      display:inline-block;
+      float: none;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    justify-content: space-around;
+    flex-basis: auto;
+  }
+
+  .navbar a {
+      margin-left: 3em;
+      margin-right: 3em;
+  }
+}
+
+.navbar > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+#intro {
+  font-weight: 900;
+}
+
+#slogan{
+  font-weight: 950;
+  color: lightblue;
+  margin-left: 2em;
+}
+.overview {
+  margin-top: 2em;
+  line-height: 2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  box-shadow: 10px 10px 5px -2px #888;
+}
