@@ -3,6 +3,10 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
+.active{
+  color:black !important;
+}
+
 #head {
   background-color: lightblue;
   width: 100%;
@@ -27,8 +31,7 @@ body {
   width: 33.3333%;
   font-size: 2rem;
   margin: 0 auto;
-  font-family: Snell Roundhand, cursiv
-  e;
+  font-family: Snell Roundhand, cursive;
 }
 
 /* The navbar */
@@ -56,39 +59,6 @@ body {
   height: 4em;
 }
 
-/* For scaling the contents of the navbar depending on device */
-
-@media only screen and (min-width: 800px) {
-  #menu {
-    background-color: lightblue;
-    color: white !important;
-    width: 100%;
-    box-shadow: 0 4px 4px -2px gray;
-  }
-
-  .navbar.center .navbar-inner .nav {
-      display:inline-block;
-      float: none;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    justify-content: space-around;
-    flex-basis: auto;
-  }
-
-  .navbar a {
-      margin-left: 3em;
-      margin-right: 3em;
-  }
-}
-
-.navbar > li{
-  padding-left:30px;
-  padding-right:30px;
-}
-
-
 #intro {
   font-weight: 900;
 }
@@ -107,4 +77,18 @@ img {
   width: 100%;
   height: auto;
   box-shadow: 10px 10px 5px -2px #888;
+  margin
+}
+
+
+/* For scaling the contents of the navbar depending on device */
+
+@media only screen and (max-width: 800px) {
+
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: 10px 10px 5px -2px #888;
+    margin-bottom: 1em;
+  }
 }
