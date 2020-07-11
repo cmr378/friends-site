@@ -8,6 +8,10 @@ body {
   height: 4em!important;
 }
 
+.active {
+  color: black !important;
+}
+
 #head {
   background-color: lightblue;
   width: 100%;
@@ -15,10 +19,6 @@ body {
   display: flex;
   align-content: space-between;
   flex-wrap: flex;
-}
-
-.active{
-  color:black !important;
 }
 
 #motto {
@@ -122,14 +122,45 @@ img {
 
 /* For scaling the contents of the navbar depending on device */
 
-@media only screen and (max-width: 800px) {
-
-  #homePic{
-    margin-top: -2.5em !important;
-    margin-bottom: 2em;
+@media only screen and (min-width: 800px) {
+  #menu {
+    background-color: lightblue;
+    color: white !important;
+    width: 100%;
+    box-shadow: 0 4px 4px -2px gray;
   }
 
-  #officePic{
+  .navbar.center .navbar-inner .nav {
+      display:inline-block;
+      float: none;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    justify-content: space-around;
+    flex-basis: auto;
+  }
+
+  .navbar a {
+      margin-left: 3em;
+      margin-right: 3em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: 10px 10px 5px -2px #888;
+  }
+
+  #homePic {
+    margin-top: -2.5em;
+    margin-bottom: 1em;
+  }
+
+  #officePic {
     margin-top: 1em;
   }
 }
