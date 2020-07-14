@@ -4,7 +4,7 @@ body {
 }
 
 .active {
-  color: black !important; 
+  color: black !important;
 }
 
 #head {
@@ -31,8 +31,7 @@ body {
   width: 33.3333%;
   font-size: 2rem;
   margin: 0 auto;
-  font-family: Snell Roundhand, cursiv
-  ze;
+  font-family: Snell Roundhand, cursive;
 }
 
 
@@ -66,10 +65,11 @@ body {
 }
 
 #slogan{
-  font-weight: 950;
+  font-weight: 900;
   color: lightblue;
   margin-left: 2em;
 }
+
 .overview {
   margin-top: 2em;
   line-height: 2;
@@ -82,6 +82,51 @@ img {
   margin
 }
 
+button {
+  border: 1px solid black;
+  background: none;
+  transform: skewX(-10deg);
+  font-size: .9em;
+  margin-top: 1em;
+}
+
+button:hover {
+  background: lightblue;
+}
+
+//Animation for language change
+.hide{
+  display:none;
+}
+
+.fade-in{
+  animation: 2s fadeIn;
+}
+
+.fade-out{
+  animation: 2s fadeOut;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+
+@keyframes fadeOut{
+  from{
+    opacity:1;
+  }
+
+  to{
+    opacity:0;
+  }
+}
 
 
 /* For scaling the contents of the navbar depending on device */

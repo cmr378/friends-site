@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="index.html" id = "first">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="services.html">Services</a>
-          <a class="nav-item nav-link active"  href="contact.html">Contact Me</a>
+          <a class="nav-item nav-link" href="services.html" id = "second">Services</a>
+          <a class="nav-item nav-link active"  href="contact.html" id = "third">Contact Me</a>
         </div>
       </div>
     </nav>
@@ -38,20 +38,39 @@
     <div class="container-fluid">
       <form action="https://formspree.io/mwkrrjzo" method="POST" target = "_blank">
         <fieldset class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="_replyto">
-          <small class="text-muted">We'll never share your email with anyone else.</small>
+          <label for="exampleInputEmail1" id = "email">Email address</label>
+          <input type="email" class="form-control" id="emailPH" placeholder="Enter email" name="_replyto">
+          <small class="text-muted" id = "assurance">We'll never share your email with anyone else.</small>
         </fieldset>
         <fieldset class="form-group">
-          <label for="name">Full Name</label>
+          <label for="name" id = "fullName">Full Name</label>
           <input type="text" class="form-control" id="name" placeholder="First and Last Name">
         </fieldset>
         <fieldset class="form-group">
-          <label for="exampleTextarea">Description</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="What can we help you with?" name = "message"></textarea>
+          <label for="exampleTextarea" id = "description">Description</label>
+          <textarea class="form-control" id="help" rows="3" placeholder="What can we help you with?" name = "message"></textarea>
         </fieldset>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn" id = "submit">Submit</button>
       </form>
     </div>
+    <script type="text/javascript">
+    var isSpanish = window.localStorage.getItem("isSpanish");
+
+    if(isSpanish == "true"){
+      document.getElementById("first").innerHTML = "Página Principal";
+      document.getElementById("second").innerHTML = "Servicios";
+      document.getElementById("third").innerHTML = "Contáctame";
+
+      document.getElementById('email').innerHTML = "Correo Electrónico";
+      document.getElementById('emailPH').placeholder = "Ingrese Correo Electrónico";
+      document.getElementById('assurance').innerHTML = "Nunca compartiremos su correo electrónico con nadie más.";
+      document.getElementById('fullName').innerHTML = "Nombre Completo";
+      document.getElementById('name').placeholder = "Primero y último nombre";
+      document.getElementById('description').innerHTML = "Descripción";
+      document.getElementById('description').innerHTML = "Descripción";
+      document.getElementById('help').innerHTML = "¿Qué podemos ayudarte?";
+      document.getElementById('submit').innerHTML ="Enviar";
+    }
+    </script>
   </body>
 </html>

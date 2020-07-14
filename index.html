@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="#" id = "first">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="services.html">Services</a>
-          <a class="nav-item nav-link"  href="contact.html">Contact Me</a>
+          <a class="nav-item nav-link" href="services.html" id = "second">Services</a>
+          <a class="nav-item nav-link"  href="contact.html" id = "third">Contact Me</a>
         </div>
       </div>
     </nav>
@@ -42,18 +42,70 @@
             <h4 id = "slogan">
               <i class="fas fa-spray-can" style = "margin-right: 5px;"></i> The Easy Way To Clean
             </h4>
-            <p class = "overview">
+            <p class = "overview" id = "overview">
               Here at Magic Broom, our customer's satisfaction is of the utmost importance. Every cleaning service we provide is approached differently,
               the way we approach an office differs from the way we approach someone's home, however the final result will remain the same, a cleaned environment.
               We boast a very efficient and meticulous workflow and pride ourselves in the work we do, believing in providing high quality cleaning services in NYC at affordable rates.
               </p>
+              <button type="button" name="button" id = "translate"> Hablamos Español!</button>
         </div>
         <div class="col-lg-6 col-md-4 col-xs-6">
           <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="image of a room">
         </div>
       </div>
     </div>
+    <script type="text/javascript">
 
+    var isSpanish = false;
+    window.localStorage.clear();
 
+    window.localStorage.setItem("isSpanish",isSpanish);
+    document.getElementById("translate").addEventListener("click",function() {
+
+      if(isSpanish){
+        isSpanish = false;
+        window.localStorage.clear();
+        window.localStorage.setItem("isSpanish",isSpanish);
+      }
+
+      else {
+        isSpanish = true;
+        window.localStorage.clear();
+        window.localStorage.setItem("isSpanish",isSpanish);
+      }
+
+      if(isSpanish) {
+
+        document.getElementById("first").innerHTML = "Página Principal";
+        document.getElementById("second").innerHTML = "Servicios";
+        document.getElementById("third").innerHTML = "Contáctame";
+
+        var slogan =   document.getElementById("slogan");
+        slogan.classList.add("fadeOut");
+        slogan.innerHTML = "<i class='fas fa-spray-can'style = 'margin-right: 5px;'>";
+        slogan.innerHTML += "La Manera Fácil De Limpiar";
+
+        document.getElementById("overview").innerHTML = "Aquí en Magic Broom, la satisfacción de nuestros clientes es de suma importancia. Cada servicio de limpieza que brindamos se aborda de manera diferente, la forma en que nos acercamos a una oficina difiere de la forma en que nos acercamos a la casa de alguien, sin embargo, el resultado final seguirá siendo el mismo, un ambiente limpio. Contamos con un flujo de trabajo muy eficiente y meticuloso y nos enorgullecemos del trabajo que hacemos, creyendo en proporcionar servicios de limpieza de alta calidad en Nueva York a precios asequibles.";
+        document.getElementById("translate").innerHTML = "We speak English!";
+      }
+
+      else {
+        document.getElementById("first").innerHTML = "Home";
+        document.getElementById("second").innerHTML = "Services";
+        document.getElementById("third").innerHTML = "Contact Me";
+
+        var slogan =   document.getElementById("slogan");
+        slogan.innerHTML = "<i class='fas fa-spray-can'style = 'margin-right: 5px;'>";
+        slogan.innerHTML += "The Easy Way To Clean";
+
+        document.getElementById("overview").innerHTML = "Here at Magic Broom, our customer's satisfaction is of the utmost importance. Every cleaning service we provide is approached differently, the way we approach an office differs from the way we approach someone's home, however the final result will remain the same, a cleaned environment. We boast a very efficient and meticulous workflow and pride ourselves in the work we do, believing in providing high quality cleaning services in NYC at affordable rates.";
+        window.localStorage.setItem("isSpanish",isSpanish);
+        document.getElementById("translate").innerHTML = "Hablamos Español!";
+      }
+    });
+
+    console.log(localStorage.getItem("isSpanish"));
+
+    </script>
   </body>
 </html>
